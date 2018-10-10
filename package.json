@@ -1,0 +1,22 @@
+{
+  "name": "einst_verk",
+  "version": "1.0.0",
+  "description": "lokaverk",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dannijo/StringCalculator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dannijo/StringCalculator/issues"
+  },
+  "homepage": "https://github.com/dannijo/StringCalculator#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
