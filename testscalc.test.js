@@ -13,5 +13,5 @@ it("should return sum of two given numbers", () => {
 });
 
 it("should sumarize multiple numbers", () => {
-	expect(add("1,2,3")).toBe(6);
+	expect(add("1\n2,3\n4,5")).toBe(15);
 });
