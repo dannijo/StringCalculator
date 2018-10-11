@@ -32,12 +32,23 @@ function checkNegative(numbers){
 
 function sum(numberArray){
 	var total = 0;
+	var totalNeg = [];
 		for(var i=0 ; i < numberArray.length ; i++){
-			if(numberArray[i] <= 1000){
+			if(numberArray[i] >= 0){
+				if(numberArray[i] <= 1000){
 				total += parseInt(numberArray[i]);
+				}
+			}
+			else{
+				totalNeg.push(numberArray[i]);
 			}
 		}
-		return total;
+		if(totalNeg.length > 0){
+			throw ("Negatives not allowed: " + totalNeg.join(', '));
+		}
+		else{
+			return total;
+		}
 }
 
 module.exports = add;
