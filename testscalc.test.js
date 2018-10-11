@@ -15,3 +15,13 @@ it("should return sum of two given numbers", () => {
 it("should sumarize multiple numbers", () => {
 	expect(add("1\n2,3\n4,5")).toBe(15);
 });
+
+/*
+it("should print out the negtive numbers", () => {
+	expect(add("1,-2,4")).toBe(new Error("villa"));
+});
+*/
+
+it("should ignore numbers higher than 1000", () => {
+	expect(add("1\n2,1004,5\n1000")).toBe(1008);
+});

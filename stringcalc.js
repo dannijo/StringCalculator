@@ -1,4 +1,6 @@
 function add (numbers){
+//	checkNegative(numbers);
+
 	if(numbers == "")
 		return 0;
 	
@@ -9,13 +11,33 @@ function add (numbers){
 	else
 		return parseInt(numbers);
 }
+/*
+function checkNegative(numbers){
+	var totalNeg = [];
+	var numberArray = numbers.split(/,|\n/g);
+		for(var i = 0; i < numberArray.length ; i++){
+			if(parseInt(numberArray[i] < 0)){
+				totalNeg.push(numberArray[i]);
+			}
+		}
+		if(totalNeg.length > 0){
+			throw new Error("Negatives not allowed: " + totalNeg.join(', '));
+		}
+		else 
+			return numbers;
+}
+*/
+
+
 
 function sum(numberArray){
 	var total = 0;
 		for(var i=0 ; i < numberArray.length ; i++){
-			total += parseInt(numberArray[i]);
+			if(numberArray[i] <= 1000){
+				total += parseInt(numberArray[i]);
+			}
 		}
 		return total;
-	}
+}
 
 module.exports = add;
