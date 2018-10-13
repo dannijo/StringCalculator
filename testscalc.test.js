@@ -1,5 +1,5 @@
 const add = require("./stringcalc");
-
+/*
 it("should return zero on an empty string", () => {
 	expect(add("")).toBe(0);
 });
@@ -25,7 +25,7 @@ it("should print out the negtive numbers", () => {
 it("should ignore numbers higher than 1000", () => {
 	expect(add("1\n2,1004,5\n1000")).toBe(1008);
 });
-
+*/
 it("should sumarize with a different delimeter", () => {
-	expect(add("1;2")).toBe(3);
+	expect(add("//;\n1;2")).toBe(3);
 });

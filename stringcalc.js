@@ -2,12 +2,14 @@ function add (numbers){
 //	checkNegative(numbers);
 
 	if(numbers == "")
-		return 0;
-	
-//	var delimeter = [numbers.split('\n')[0].substring(2)];
+		return 0;	
 
-	if(numbers.includes(",") || numbers.includes("\n") || numbers.includes(";")){
-		var numberArray = numbers.split(/;|,|\n/);
+	var delimeter = [numbers.split('\n')[0].substring(2)];
+	var numberArray = numbers.split(delimeter);
+	return sum(numberArray);
+	
+	if(numbers.includes(",") || numbers.includes("\n") || numbers.includes(delimeter)){
+		var numberArray = numbers.split(/delimeter|,|\n/);
 		return sum(numberArray);
 	}
 	else
@@ -23,7 +25,7 @@ function sum(numberArray){
 				total += parseInt(numberArray[i]);
 				}
 			}
-			else{
+			else if(numberArray[i] < 0){
 				totalNeg.push(numberArray[i]);
 			}
 		}
