@@ -3,17 +3,27 @@ function add (numbers){
 
 	if(numbers == "")
 		return 0;	
+	
+/*	Ef eg fer inn i thetta tha fer negative numbers i rugl!!!!
 
 	var delimeter = [numbers.split('\n')[0].substring(2)];
-	var numberArray = numbers.split(delimeter);
-	return sum(numberArray);
-	
-	if(numbers.includes(",") || numbers.includes("\n") || numbers.includes(delimeter)){
-		var numberArray = numbers.split(/delimeter|,|\n/);
+		if(!checkDelimeter(delimeter)){
+			var numberArray = numbers.split(delimeter);
+			return sum(numberArray);
+		}
+*/
+	if(numbers.includes(",") || numbers.includes("\n")){ // || numbers.includes(delimeter)){
+		var numberArray = numbers.split(/,|\n/);
 		return sum(numberArray);
 	}
 	else
 		return parseInt(numbers);
+}
+function checkDelimeter(delimeter){
+	if(delimeter >= 0 || delimeter < 0){
+		return true;
+	}
+	return false;
 }
 
 function sum(numberArray){
@@ -57,3 +67,4 @@ function checkNegative(numbers){
 }
 */
 
+//function getDelimeter(){}
