@@ -4,31 +4,15 @@ function add (numbers){
 	if(numbers == "")
 		return 0;
 	
-	if(numbers.includes(",") || numbers.includes("\n")){
-		var numberArray = numbers.split(/,|\n/g);
+//	var delimeter = [numbers.split('\n')[0].substring(2)];
+
+	if(numbers.includes(",") || numbers.includes("\n") || numbers.includes(";")){
+		var numberArray = numbers.split(/;|,|\n/);
 		return sum(numberArray);
 	}
 	else
 		return parseInt(numbers);
 }
-/*
-function checkNegative(numbers){
-	var totalNeg = [];
-	var numberArray = numbers.split(/,|\n/g);
-		for(var i = 0; i < numberArray.length ; i++){
-			if(parseInt(numberArray[i] < 0)){
-				totalNeg.push(numberArray[i]);
-			}
-		}
-		if(totalNeg.length > 0){
-			throw new Error("Negatives not allowed: " + totalNeg.join(', '));
-		}
-		else 
-			return numbers;
-}
-*/
-
-
 
 function sum(numberArray){
 	var total = 0;
@@ -52,3 +36,22 @@ function sum(numberArray){
 }
 
 module.exports = add;
+
+
+/*
+function checkNegative(numbers){
+	var totalNeg = [];
+	var numberArray = numbers.split(/,|\n/g);
+		for(var i = 0; i < numberArray.length ; i++){
+			if(parseInt(numberArray[i] < 0)){
+				totalNeg.push(numberArray[i]);
+			}
+		}
+		if(totalNeg.length > 0){
+			throw new Error("Negatives not allowed: " + totalNeg.join(', '));
+		}
+		else 
+			return numbers;
+}
+*/
+

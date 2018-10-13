@@ -18,10 +18,14 @@ it("should sumarize multiple numbers", () => {
 
 
 it("should print out the negtive numbers", () => {
-	expect(add("1,-2,4\n-6")).toBe("-2, -6");
+	expect(add("1,-2,4\n-6")).toThrow("villa");
 });
 
 
 it("should ignore numbers higher than 1000", () => {
 	expect(add("1\n2,1004,5\n1000")).toBe(1008);
+});
+
+it("should sumarize with a different delimeter", () => {
+	expect(add("1;2")).toBe(3);
 });
